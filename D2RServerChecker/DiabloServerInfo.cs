@@ -4,6 +4,8 @@ using System.Text;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Globalization;
+using System.Threading;
 
 namespace D2RServerChecker {
     class DiabloServerInfo {
@@ -38,6 +40,7 @@ namespace D2RServerChecker {
                 process.StartInfo.Arguments = "-ano";
                 process.Start();
 
+
                 using(StreamReader reader = process.StandardOutput) {
                     string output = reader.ReadToEnd();
                     process.WaitForExit();
@@ -65,10 +68,10 @@ namespace D2RServerChecker {
 
                         if(validEntries[4] == processID.ToString()) {
                             // D2R Connection
-                            if(validEntries[3] == "ESTABLISHED") {
+                            //if(validEntries[3] == "ESTABLISHED") {
                                 string address = validEntries[2].Split(":")[0];
                                 addressList.Add(address);
-                            }
+                            //}
                         }
                     }
                 }
