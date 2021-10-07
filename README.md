@@ -3,7 +3,7 @@ Gets the IP address of the server you are currently connected to on D2R.  Used m
 
 # Instructions
 1. Launch D2R and connect to the Lobby
-2. Click the "Click this when in lobby button"
+2. Click the "Click this when in lobby button" (You only have to do this once)
 3. Enter a game
 4. Click "Get server address"
 
