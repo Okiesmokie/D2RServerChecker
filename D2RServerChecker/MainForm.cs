@@ -49,5 +49,11 @@ namespace D2RServerChecker {
                 serverAddressTextBox.BackColor = Color.Transparent;
             }
         }
+
+        private void pinBtn_Click(object sender, EventArgs e)
+        {
+            TopMost = !TopMost;
+            pinBtn.Text = pinBtn.Text == "pin" ? "unpin": "pin";
+        }
     }
 }
