@@ -26,8 +26,9 @@ namespace D2RServerChecker {
         private void InitializeComponent() {
             this.generateBaselineButton = new System.Windows.Forms.Button();
             this.getServerAddressButton = new System.Windows.Forms.Button();
-            this.serverAddressTextLabel = new System.Windows.Forms.Label();
-            this.serverAddressTextBox = new System.Windows.Forms.TextBox();
+            this.serverAddressTextBox = new System.Windows.Forms.Label();
+            this.targetIpLbl = new System.Windows.Forms.Label();
+            this.targetIp = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // generateBaselineButton
@@ -45,36 +46,43 @@ namespace D2RServerChecker {
             this.getServerAddressButton.Enabled = false;
             this.getServerAddressButton.Location = new System.Drawing.Point(12, 41);
             this.getServerAddressButton.Name = "getServerAddressButton";
-            this.getServerAddressButton.Size = new System.Drawing.Size(329, 23);
+            this.getServerAddressButton.Size = new System.Drawing.Size(153, 23);
             this.getServerAddressButton.TabIndex = 1;
-            this.getServerAddressButton.Text = "Get server address";
+            this.getServerAddressButton.Text = "Get server address:";
             this.getServerAddressButton.UseVisualStyleBackColor = true;
             this.getServerAddressButton.Click += new System.EventHandler(this.getServerAddressButton_Click);
             // 
-            // serverAddressTextLabel
-            // 
-            this.serverAddressTextLabel.AutoSize = true;
-            this.serverAddressTextLabel.Location = new System.Drawing.Point(12, 77);
-            this.serverAddressTextLabel.Name = "serverAddressTextLabel";
-            this.serverAddressTextLabel.Size = new System.Drawing.Size(65, 15);
-            this.serverAddressTextLabel.TabIndex = 2;
-            this.serverAddressTextLabel.Text = "IP Address:";
-            // 
             // serverAddressTextBox
             // 
-            this.serverAddressTextBox.Location = new System.Drawing.Point(83, 74);
+            this.serverAddressTextBox.Location = new System.Drawing.Point(171, 42);
             this.serverAddressTextBox.Name = "serverAddressTextBox";
-            this.serverAddressTextBox.ReadOnly = true;
-            this.serverAddressTextBox.Size = new System.Drawing.Size(258, 23);
+            this.serverAddressTextBox.Size = new System.Drawing.Size(179, 23);
             this.serverAddressTextBox.TabIndex = 3;
+            // 
+            // targetIpLbl
+            // 
+            this.targetIpLbl.AutoSize = true;
+            this.targetIpLbl.Location = new System.Drawing.Point(12, 71);
+            this.targetIpLbl.Name = "targetIpLbl";
+            this.targetIpLbl.Size = new System.Drawing.Size(82, 15);
+            this.targetIpLbl.TabIndex = 4;
+            this.targetIpLbl.Text = "Enter Target IP";
+            // 
+            // targetIp
+            // 
+            this.targetIp.Location = new System.Drawing.Point(171, 71);
+            this.targetIp.Name = "targetIp";
+            this.targetIp.Size = new System.Drawing.Size(179, 23);
+            this.targetIp.TabIndex = 5;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 112);
+            this.Controls.Add(this.targetIp);
+            this.Controls.Add(this.targetIpLbl);
             this.Controls.Add(this.serverAddressTextBox);
-            this.Controls.Add(this.serverAddressTextLabel);
             this.Controls.Add(this.getServerAddressButton);
             this.Controls.Add(this.generateBaselineButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -89,8 +97,9 @@ namespace D2RServerChecker {
 
         private System.Windows.Forms.Button generateBaselineButton;
         private System.Windows.Forms.Button getServerAddressButton;
-        private System.Windows.Forms.Label serverAddressTextLabel;
-        private System.Windows.Forms.TextBox serverAddressTextBox;
+        private System.Windows.Forms.Label serverAddressTextBox;
+        private System.Windows.Forms.Label targetIpLbl;
+        private System.Windows.Forms.TextBox targetIp;
     }
 }
 

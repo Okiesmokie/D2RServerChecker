@@ -40,6 +40,14 @@ namespace D2RServerChecker {
             }
 
             serverAddressTextBox.Text = string.Join(",", serverAddresses);
+
+            if(serverAddresses.Contains(targetIp.Text))
+            {
+                serverAddressTextBox.BackColor = Color.LightGreen;
+            } else
+            {
+                serverAddressTextBox.BackColor = Color.Transparent;
+            }
         }
     }
 }
