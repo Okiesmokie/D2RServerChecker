@@ -40,6 +40,20 @@ namespace D2RServerChecker {
             }
 
             serverAddressTextBox.Text = string.Join(",", serverAddresses);
+
+            if(serverAddresses.Contains(targetIp.Text))
+            {
+                serverAddressTextBox.BackColor = Color.LightGreen;
+            } else
+            {
+                serverAddressTextBox.BackColor = Color.Transparent;
+            }
+        }
+
+        private void pinBtn_Click(object sender, EventArgs e)
+        {
+            TopMost = !TopMost;
+            pinBtn.Text = pinBtn.Text == "pin" ? "unpin": "pin";
         }
     }
 }
